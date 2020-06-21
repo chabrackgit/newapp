@@ -1,15 +1,37 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, DoCheck } from '@angular/core';
 
 @Component({
   selector: 'app-nouveau',
-  templateUrl: './nouveau.component.html',
-  styleUrls: ['./nouveau.component.css']
+  template: `
+  <p>
+    {{ data }}
+  </p>
+  `
 })
-export class NouveauComponent implements OnInit {
 
-  constructor() { }
+export class NouveauComponent implements OnChanges, OnInit, DoCheck {
+  @Input('') public data: string;
 
-  ngOnInit() {
+  constructor() {
+    console.log("Constructor: ", this.data);  
   }
+
+  ngOnChanges(simpleChange){
+    console.log("ngOnChange");
+    console.log("On Changes : ", this.data);
+  }
+
+  ngOnInit(){
+    console.log("On Init : ", this.data);
+  }
+
+  ngDoCheck(){
+    console.log("ng Do Check");
+  }
+
+  
+
+  // ngOnInit() {
+  // }
 
 }

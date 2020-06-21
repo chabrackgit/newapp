@@ -7,17 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-
-    public users: Array< {nom: string}> = [
-      {
-        nom:"Mohamed"
-      },
-      {
-        nom:"Didine"
-      },
-      {
-        nom:"Hassan"
-      }
-    ]
-
+  public display= true;
+  public data:string ='';
+  
 }
