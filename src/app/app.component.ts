@@ -8,5 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
 
-  public displayButton = true;
+    public color = 'green';
+    public hauteur = 200 + "px";
+    public largeur = 200 + "px";
+
 }

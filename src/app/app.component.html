@@ -1,8 +1,16 @@
 
-<button
-    (click)="displayButton=!displayButton"
->Bouton</button>
+<input type="text" [(ngModel)]="color"/>
+<hr>
+<input type="text" [(ngModel)]="hauteur"/>
+<hr>
+<input type="text" [(ngModel)]="largeur"/>
 
 
+<hr>
+<div [ngStyle]="{
+    margin: '0 auto',
+    width: largeur,
+    height: hauteur,
+    backgroundColor: color
+}"></div>
 
-<p *ngIf="displayButton" >Bonjour</p>
