@@ -8,8 +8,16 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
 
-    public color = 'green';
-    public hauteur = 200 + "px";
-    public largeur = 200 + "px";
+    public users: Array< {nom: string}> = [
+      {
+        nom:"Mohamed"
+      },
+      {
+        nom:"Didine"
+      },
+      {
+        nom:"Hassan"
+      }
+    ]
 
 }
