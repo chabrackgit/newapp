@@ -6,15 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  public color= "blue";
   
-  public inputType = "date";
-  public submitType = "submit";
-
-  constructor(){
-    setTimeout(()=>{
-      this.inputType = "number";
-    }, 3000);
-    
+  public changeColor(color: string): void
+  {
+      this.color = color;
   }
-
 }
