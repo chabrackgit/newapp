@@ -6,9 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public multiplier(nbr: number): number 
-  {
-    return nbr*nbr;
-  };
+  
+  public inputType = "date";
+  public submitType = "submit";
+
+  constructor(){
+    setTimeout(()=>{
+      this.inputType = "number";
+    }, 3000);
+    
+  }
 
 }
