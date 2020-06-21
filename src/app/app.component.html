@@ -1,16 +1,10 @@
 
-<input type="text" [(ngModel)]="color"/>
-<hr>
-<input type="text" [(ngModel)]="hauteur"/>
-<hr>
-<input type="text" [(ngModel)]="largeur"/>
+<input type="text" [(ngModel)]="color" />
 
 
-<hr>
-<div [ngStyle]="{
-    margin: '0 auto',
-    width: largeur,
-    height: hauteur,
-    backgroundColor: color
-}"></div>
 
+<div class="square" [ngClass]="{
+    bluesquare: color === 'blue',
+    redsquare: color === 'red'
+    }"
+></div>
