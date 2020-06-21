@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  public name ="";
-  public email="";
+
+  public displayButton = true;
 }

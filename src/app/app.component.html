@@ -1,20 +1,8 @@
-<form action="" method="POST">  
-    <h2>formulaire inscription </h2>
 
-    <input type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}"/>
-    <hr>
-    <input type="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}"/>
-    <hr>
-
-    <input type="submit"/>
-
-    <hr>
+<button
+    (click)="displayButton=!displayButton"
+>Bouton</button>
 
 
 
-</form>
-
-
-<p>bonjour {{ name }}</p>
-<p>Votre adresse email : {{ email }}</p>
-
+<p *ngIf="displayButton" >Bonjour</p>
