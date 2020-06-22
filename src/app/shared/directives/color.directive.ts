@@ -1,22 +1,23 @@
-import { Directive, ElementRef, OnInit, Renderer2, HostListener, HostBinding } from '@angular/core';
+import { Directive, ElementRef, OnInit, Renderer2, HostListener, HostBinding, Input } from '@angular/core';
 
 @Directive({
-    selector: '[appColor]'
+    selector: '[color]'
 })
 
 export class ColorDirective implements OnInit {
 
 
     @HostBinding('style.backgroundColor') backgroundColor = 'transparent';
-    @HostBinding('style.color') color = 'blue';
+    @HostBinding('style.color') color;
+    @Input('color') data ;
 
     constructor(private el: ElementRef, private renderer: Renderer2){}
 
     ngOnInit(){
-    
+        this.color = this.data.text;
     }
 
     @HostListener('click') click(){
-        this.backgroundColor = 'black';
+        this.backgroundColor = this.data.background;
     }
 }
