@@ -4,12 +4,15 @@ import { FormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { NouveauComponent } from './theme/nouveau/nouveau.component';
+import { ColorDirective } from './shared/directives/color.directive'
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NouveauComponent
+    NouveauComponent,
+    ColorDirective,
+
   ],
   imports: [
     BrowserModule,

@@ -7,7 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  public display= true;
-  public data:string ='';
+
   
 }
